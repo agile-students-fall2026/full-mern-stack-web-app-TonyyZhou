@@ -57,6 +57,27 @@ app.get('/messages/:messageId', async (req, res) => {
     })
   }
 })
+
+
+
+// Tony Add route for fetching about us
+
+app.get('/about-us', (req,res) => {
+  res.json({
+    title:'About US',
+    name:'Tony Zhou',
+    paragraphs: [
+      ' My name is Tony and I am currently studing computer science and Economics at NYU.',
+      ' I am interested in software development and learning how those stuff work in present and future career' ,
+      ' Outside of class I enjoy to explore anything new and working on different projects， also do like spoprts and environment' ,
+    ],
+    imageUrl:'/Tony_Photo.JPG',
+  })
+})
+
+
+
+
 // a route to handle logging out users
 app.post('/messages/save', async (req, res) => {
   // try to save the message to the database
